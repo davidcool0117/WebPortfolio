@@ -90,7 +90,6 @@
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
   border-radius: 14px;
-  background: red url("../images/img_grad1.svg") no-repeat;
 }
 .box_inner .box_left .img_left .desc {
   position: absolute;
@@ -281,7 +280,7 @@
   display: block;
   position: absolute;
   width: 100%;
-  height: 1000px;
+  height: 785px;
   background-size: cover;
 }
 

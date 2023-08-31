@@ -3,27 +3,42 @@ import "../css/PortFolio.css";
 import p1 from "../images/port_komsco.png";
 import p2 from "../images/port_perpet.png";
 import p3 from "../images/port_yorijori.png";
-import GP from "./Grad_project";
+import p4 from "../images/port_portfolio.png";
 
 function PortFolio() {
   const bg = useRef(null);
   const thumb = useRef(null);
   const img = useRef(null);
 
+  const bg2 = useRef(null);
+  const thumb2 = useRef(null);
+  const img2 = useRef(null);
+
   const bg3 = useRef(null);
   const thumb3 = useRef(null);
   const img3 = useRef(null);
 
+  const bg4 = useRef(null);
+  const thumb4 = useRef(null);
+  const img4 = useRef(null);
+
   const pro1 = { backgroundImage: `url(${p1})` };
   const pro2 = { backgroundImage: `url(${p2})` };
   const pro3 = { backgroundImage: `url(${p3})` };
+  const pro4 = { backgroundImage: `url(${p4})` };
 
   function scroll() {
     const bgH = bg.current.clientHeight;
     const imgH = img.current.clientHeight;
     const scrollVal = bgH - imgH;
     thumb.current.style.top = scrollVal + "px";
-    console.log(bgH, imgH, scrollVal);
+  }
+
+  function scroll2() {
+    const bgH = bg2.current.clientHeight;
+    const imgH = img2.current.clientHeight;
+    const scrollVal = bgH - imgH;
+    thumb2.current.style.top = scrollVal + "px";
   }
 
   function scroll3() {
@@ -31,7 +46,13 @@ function PortFolio() {
     const imgH = img3.current.clientHeight;
     const scrollVal = bgH - imgH;
     thumb3.current.style.top = scrollVal + "px";
-    console.log(bgH, imgH, scrollVal);
+  }
+
+  function scroll4() {
+    const bgH = bg4.current.clientHeight;
+    const imgH = img4.current.clientHeight;
+    const scrollVal = bgH - imgH;
+    thumb4.current.style.top = scrollVal + "px";
   }
 
   return (
@@ -138,17 +159,17 @@ function PortFolio() {
                     <span className="title_p">PerPet (반려동물 용품 - 리액트)</span>
                     <div className="capture">
                       <div
-                        ref={bg}
+                        ref={bg2}
                         className="bg"
                         onMouseOver={() => {
-                          scroll();
+                          scroll2();
                         }}
                         onMouseLeave={() => {
-                          thumb.current.style.top = 0;
+                          thumb2.current.style.top = 0;
                         }}
                       >
-                        <a ref={thumb} href="https://github.com/wooyoung6685/perpet" target="_blank" className="thumb" rel="noreferrer">
-                          <span ref={img} style={pro2}></span>
+                        <a ref={thumb2} href="https://github.com/wooyoung6685/perpet" target="_blank" className="thumb" rel="noreferrer">
+                          <span ref={img2} style={pro2}></span>
                         </a>
                       </div>
                     </div>
@@ -320,7 +341,82 @@ function PortFolio() {
             </div>
           </div>
         </div>
-        <GP />
+        <div className="slide">
+          <div id="container">
+            <h1 className="title_s screen_out">웹 포트폴리오</h1>
+            <div className="project_box">
+              <div className="box_inner">
+                <div className="box_left">
+                  <span className="num_p">04</span>
+                  <div className="contents_">
+                    <span className="title_p">웹 포트폴리오 (리액트)</span>
+                    <div className="capture">
+                      <div
+                        ref={bg4}
+                        className="bg"
+                        onMouseOver={() => {
+                          scroll4();
+                        }}
+                        onMouseLeave={() => {
+                          thumb4.current.style.top = 0;
+                        }}
+                      >
+                        <a ref={thumb4} href="https://web-portfolio-gold-five.vercel.app/" target="_blank" rel="noreferrer" className="thumb">
+                          <span ref={img4} style={pro4}></span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="box_right">
+                  <div className="info_project">
+                    <div>
+                      <h5 className="title_">사용 기술</h5>
+                      <ul>
+                        <li style={{ letterSpacing: "1px" }}>- React, SCSS, JavaScript, Bootstrap  </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="title_"> 기여도 / 작업기간</h5>
+                      <ul>
+                        <li>- 100% / 1주</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h5 className="title_">기능 구현</h5>
+                      <ul>
+                        <li>- 풀페이지로 구성 (React)</li>
+                        <li>- 메인 페이지 동적 애니메이션 요소 추가(JavaScript)</li>
+                        <li>- 마우스 포인터 효과 (JavaScript)</li>
+                        <li>- Bootstrap과 SCSS를 활용한 반응형 페이지 구현</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="box_btn">
+                    <button
+                      type="button"
+                      className="btn_n"
+                      onClick={() => {
+                        window.open("https://github.com/davidcool0117/WebPortfolio");
+                      }}
+                    >
+                      깃허브
+                    </button>
+                    <button
+                      type="button"
+                      className="btn_p"
+                      onClick={() => {
+                        window.open("https://web-portfolio-gold-five.vercel.app/");
+                      }}
+                    >
+                      사이트
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
