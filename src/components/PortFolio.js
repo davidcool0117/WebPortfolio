@@ -388,7 +388,6 @@ function PortFolio() {
                         <li>- 풀페이지로 구성 (React)</li>
                         <li>- 메인 페이지 동적 애니메이션 요소 추가(JavaScript)</li>
                         <li>- 마우스 포인터 효과 (JavaScript)</li>
-                        <li>- Bootstrap과 SCSS를 활용한 반응형 페이지 구현</li>
                       </ul>
                     </div>
                   </div>
