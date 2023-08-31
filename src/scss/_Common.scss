@@ -1,0 +1,44 @@
+@mixin inner {
+  max-width: 1280px;
+}
+
+@mixin container {
+  margin: 0 auto;
+  box-sizing: border-box;
+  @include inner;
+  padding: 0 40px;
+  width: 100%;
+  height: 80vh;
+}
+
+//color
+$point: #00aaf0;
+$bg: #f9f9f9;
+$track: #7788994d;
+
+@mixin popin {
+  font-family: "Poppins";
+}
+@mixin noto {
+  font-family: "Noto Sans KR", sans-serif;
+}
+@mixin robo {
+  font-family: "roboto", sans-serif;
+}
+
+//portfolio box
+@mixin box_port {
+  display: flex;
+  column-gap: 20px;
+}
+
+.screen_out {
+  position: absolute;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+}

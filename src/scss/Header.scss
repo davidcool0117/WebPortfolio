@@ -1,0 +1,43 @@
+@import "./Common";
+
+#header {
+  position: fixed;
+  display: flex;
+  z-index: 99;
+  width: 80%;
+  height: 90px;
+  @include inner;
+  top: 0px;
+  left: 50%;
+  padding: 0;
+  box-sizing: border-box;
+  transform: translateX(-50%);
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+.header_gnb {
+  box-sizing: border-box;
+  a {
+    padding: 10px 16px;
+    margin-right: 10px;
+    color: black;
+    font-size: 16px;
+    @include popin;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      color: $point;
+    }
+  }
+  .contact {
+    margin-left: 18px;
+    border: 2px solid black;
+    &:hover {
+      background: #000 !important;
+      border-color: #000 !important;
+      color: #fff !important;
+    }
+  }
+}
