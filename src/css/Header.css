@@ -40,14 +40,14 @@
   transition: all 0.3s ease-in-out;
 }
 .header_gnb a:hover {
-  color: #00aaf0;
+  color: #cd853f;
 }
 .header_gnb .contact {
   margin-left: 18px;
   border: 2px solid black;
 }
 .header_gnb .contact:hover {
-  background: #000 !important;
+  background: #cd853f !important;
   border-color: #000 !important;
   color: #fff !important;
 }/*# sourceMappingURL=Header.css.map */

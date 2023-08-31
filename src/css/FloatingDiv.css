@@ -1,0 +1,25 @@
+.floatingDiv {
+  position: absolute;
+  justify-content: space-around;
+  background: #fff;
+  box-shadow: var(--boxShadow);
+  border-radius: 17px;
+  display: flex;
+  align-items: center;
+  height: 7.5rem;
+  animation: move 0.6s ease-in-out 0.3s infinite alternate;
+}
+
+.floatingDiv>img {
+  transform: scale(0.75);
+}
+
+@keyframes move {
+  0% {
+    top: 40px;
+  }
+
+  100% {
+    top: 55px;
+  }
+}

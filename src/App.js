@@ -3,6 +3,8 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import "./index.css";
 import FullPage from "./components/FullPage";
 import Header from "./components/Header";
+import MouseHandler from "./components/MouseHandler";
+
 
 const anchors = ["Home", "About", "Portfolio", "Contact"];
 
@@ -24,6 +26,7 @@ function App() {
           </ReactFullpage.Wrapper>
         )}
       />
+      <MouseHandler />
     </>
   );
 }

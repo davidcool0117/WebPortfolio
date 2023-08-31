@@ -51,9 +51,9 @@
 }
 
 #container .content .title span {
-  -webkit-text-stroke: 1px blue;
+  -webkit-text-stroke: 1px darkred;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: blue;
+  -webkit-text-stroke-color: darkred;
 }
 
 #container .content .title .overlay_effect {
@@ -76,6 +76,7 @@
   animation: anim 2.5s cubic-bezier(0.77, 0, 0.175, 1) both;
   background-color: hsla(0deg, 0%, 100%, 0.4);
   z-index: 2;
+  animation-iteration-count: infinite;
 }
 
 #container .content .title .overlay_effect::after {
@@ -202,7 +203,7 @@
 
 .btn_main .btn_white:hover {
   border: 2px solid #000;
-  background-color: #000;
+  background-color: #cd853f;
   color: #fff;
   transform: translateY(-3px);
 }
@@ -211,7 +212,7 @@
   display: inline-block;
   padding: 10px 33px;
   border: 2px solid #000;
-  background-color: #000;
+  background-color: #cd853f;
   color: #fff;
   font-family: "Noto Sans KR", sans-serif;
   font-size: 16px;
@@ -227,3 +228,21 @@
 }
 
 /*# sourceMappingURL=MainPage.css.map */
+
+.i-right {
+  flex: 1;
+  position: relative;
+}
+.i-right > * {
+  position: absolute;
+  z-index: 1;
+}
+.i-right > :nth-child(1) {
+  transform: scale(0.8);
+}
+.i-right > :nth-child(2) {
+  transform: scale(0.8);
+}
+.i-right > :nth-child(3) {
+  transform: scale(0.8);
+}

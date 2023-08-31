@@ -88,9 +88,9 @@
   margin-bottom: 20px;
   font-size: 60px;
   font-weight: 800;
-  -webkit-text-stroke: 1px blue;
+  -webkit-text-stroke: 1px darkred;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: blue;
+  -webkit-text-stroke-color: darkred;
 }
 .txt_inner div {
   width: 393px;

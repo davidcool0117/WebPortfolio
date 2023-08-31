@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "../css/PortFolio.css";
 import p1 from "../images/port_komsco.png";
-import p21 from "../images/play_anbd.mp4";
+import p2 from "../images/port_perpet.png";
 import p3 from "../images/port_yorijori.png";
 import GP from "./Grad_project";
 
@@ -15,6 +15,7 @@ function PortFolio() {
   const img3 = useRef(null);
 
   const pro1 = { backgroundImage: `url(${p1})` };
+  const pro2 = { backgroundImage: `url(${p2})` };
   const pro3 = { backgroundImage: `url(${p3})` };
 
   function scroll() {
@@ -68,7 +69,7 @@ function PortFolio() {
                     <div>
                       <h5 className="title_">사용 기술</h5>
                       <ul>
-                        <li style={{ letterSpacing: "1px" }}>- HTML, CSS, jQury, Javascript, PHP, Mysql</li>
+                        <li style={{ letterSpacing: "1px" }}>- HTML, CSS, Javascript, jQuery </li>
                       </ul>
                     </div>
                     <div>
@@ -82,7 +83,7 @@ function PortFolio() {
                       <ul>
                         {/* <li>- 웹 표준을 고려한 시멘틱 마크업 설계 </li> */}
                         <li>- PC와 모바일 대응이 가능한 반응형 웹 적용 </li>
-                        <li>- jQury, javascript 를 이용하여 각각 슬라이드 구현</li>
+                        <li>- Javascript, jQuery 를 이용하여 각각 슬라이드 구현</li>
                         <li>- 푸터 퀵 메뉴를 확인할 수 있는 Non-Modal 노출 기능 구현</li>
                         <li>
                           -
@@ -98,22 +99,6 @@ function PortFolio() {
                           </a>
                           &nbsp;api를 활용하여 기상정보 및 대기환경 정보 파싱
                         </li>
-                        <li>
-                          - Mysql과 연동하여&nbsp;
-                          <a href="http://wa7894.dothome.co.kr/pro1_ver2/board.php" target="_blank" rel="noreferrer">
-                            PHP게시판&nbsp;
-                          </a>
-                          CRUD 구현
-                          <a href="https://www.dothome.co.kr/" target="_blank" rel="noreferrer">
-                            <i>(호스팅:dothome)</i>
-                          </a>
-                        </li>
-                        <li>
-                          -{" "}
-                          <a href="http://wa7894.dothome.co.kr/pro1_ver2/login.php" target="_blank" rel="noreferrer">
-                            PHP로그인/로그아웃 구현
-                          </a>
-                        </li>
                       </ul>
                     </div>
                   </div>
@@ -125,16 +110,7 @@ function PortFolio() {
                         window.open("https://github.com/davidcool0117/firstproject");
                       }}
                     >
-                      깃허브보기
-                    </button>
-                    <button
-                      type="button"
-                      className="btn_n"
-                      onClick={() => {
-                        window.open("http://wa7894.dothome.co.kr/pro1_ver2/board.php");
-                      }}
-                    >
-                      게시판보기
+                      깃허브
                     </button>
                     <button
                       type="button"
@@ -143,7 +119,7 @@ function PortFolio() {
                         window.open("https://davidcool0117.github.io/firstproject/");
                       }}
                     >
-                      사이트보기
+                      사이트
                     </button>
                   </div>
                 </div>
@@ -153,15 +129,28 @@ function PortFolio() {
         </div>
         <div className="slide">
           <div id="container">
-            <h1 className="title_s screen_out">ANBD 리액트 쇼핑몰 팀프로젝트</h1>
+            <h1 className="title_s screen_out">PerPet 반려동물 용품 팀프로젝트</h1>
             <div className="project_box">
               <div className="box_inner">
                 <div className="box_left">
                   <span className="num_p">02</span>
                   <div className="contents_">
-                    <span className="title_p">ANBD (중고 쇼핑몰 - 리액트 풀스택)</span>
-                    <div className="video_box">
-                      <video className="video_anbd" src={p21} muted controls autoPlay></video>
+                    <span className="title_p">PerPet (반려동물 용품 - 리액트)</span>
+                    <div className="capture">
+                      <div
+                        ref={bg}
+                        className="bg"
+                        onMouseOver={() => {
+                          scroll();
+                        }}
+                        onMouseLeave={() => {
+                          thumb.current.style.top = 0;
+                        }}
+                      >
+                        <a ref={thumb} href="https://github.com/wooyoung6685/perpet" target="_blank" className="thumb" rel="noreferrer">
+                          <span ref={img} style={pro2}></span>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -170,35 +159,31 @@ function PortFolio() {
                     <div>
                       <h5 className="title_">사용 기술</h5>
                       <ul>
-                        <li style={{ letterSpacing: "1px" }}>- React, SCSS, Node.js, sqlite3</li>
+                        <li style={{ letterSpacing: "1px" }}>- React, JavaScript, Node.js, Sequelize, Figma</li>
                       </ul>
                     </div>
                     <div>
                       <h5 className="title_">팀인원수 / 기여도 / 작업기간 </h5>
                       <ul>
-                        <li>- 4명 / 40% / 3주 </li>
+                        <li>- 4명 / 30% / 3주 </li>
                       </ul>
                     </div>
                     <div>
                       <h5 className="title_">기능 구현</h5>
                       <ul>
-                        <li>- SQLite3 DB생성</li>
-                        <li>- NodeJs + Express 웹 서버 구축 </li>
-                        <li>- NodeJs + Multer 파일 업로드 처리 </li>
-                        <li>- PWA(Progressive Web Application)앱 배포</li>
+                        <li>- 상품을 등록하며 할인율 입력시 할인가 자동변경 </li>
+                        <li>- 할인가가 있을 경우 할인가 상품목록 구역에 업로드
+                          <br />
+                          (NodeJs + Multer 파일 업로드 처리)
+                        </li>
+                        <li>- 상품 클릭시 상세페이지로 이동 → 상품 설명이 나오는 상세페이지 화면 렌더링</li>
+                        <li>- 결제 버튼 클릭시 메인페이지 렌더, 결제된 상품 soldout</li>
                         <li>
                           - axios RESTful API 요청을 보내고 응답 값 파싱 및 처리
                           <br />
                           (상품 업로드 페이지, 상품 상세 페이지 구현, 상품결제시 soldout 처리)
                         </li>
-                        <li>
-                          - 팀 대표로 프로젝트 깃허브 협업 관리 및 배포 사이트와 연동 <br />
-                          (pront - vercel,&nbsp;
-                          <a href="https://port-0-anbd-db-sever-6g2llfcbue07.sel3.cloudtype.app/" target="_blank" rel="noreferrer">
-                            server - cloudtype
-                          </a>
-                          )
-                        </li>
+                        <li>- PWA(Progressive Web Application)앱 배포</li>
                       </ul>
                     </div>
                   </div>
@@ -207,28 +192,37 @@ function PortFolio() {
                       type="button"
                       className="btn_n"
                       onClick={() => {
-                        window.open("https://github.com/orgs/2ANBD/repositories");
+                        window.open("https://github.com/wooyoung6685/perpet");
                       }}
                     >
-                      깃허브보기
+                      깃허브
                     </button>
                     <button
                       type="button"
                       className="btn_n"
                       onClick={() => {
-                        window.open("https://drive.google.com/file/d/1o3oiigDkKaxvAlQfm5rOJlWLP0CXVlIG/view?usp=sharing");
+                        window.open("https://github.com/wooyoung6685/perpetserver");
                       }}
                     >
-                      기획서보기
+                      깃허브-서버
                     </button>
                     <button
                       type="button"
                       className="btn_p"
                       onClick={() => {
-                        window.open("https://anbd.vercel.app/");
+                        window.open("https://www.figma.com/file/MEz6EUier3DwqKXYA5GoS8/3%EC%A1%B0--PERPET_project?type=design&mode=design&t=6Qy78wV40A1pUcoY-1");
                       }}
                     >
-                      사이트보기
+                      회의
+                    </button>
+                    <button
+                      type="button"
+                      className="btn_p"
+                      onClick={() => {
+                        window.open("https://per-pet.vercel.app/");
+                      }}
+                    >
+                      사이트
                     </button>
                   </div>
                 </div>
@@ -268,7 +262,7 @@ function PortFolio() {
                     <div>
                       <h5 className="title_">사용 기술</h5>
                       <ul>
-                        <li style={{ letterSpacing: "1px" }}>- HTML, SCSS, Bootstrap, Javascript </li>
+                        <li style={{ letterSpacing: "1px" }}>- HTML, SCSS, JavaScript, Bootstrap  </li>
                       </ul>
                     </div>
                     <div>
@@ -280,7 +274,8 @@ function PortFolio() {
                     <div>
                       <h5 className="title_">기능 구현</h5>
                       <ul>
-                        <li>- 랜덤섹션 구현(javascript로 랜덤카드 출력 및 중복 출력 제어)</li>
+                        <li>- 소개카드 구현(SCSS로 동적인 애니메이션 구현)</li>
+                        <li>- 스크롤시 생성되는 사이드 퀵 네비바 기능 구현 (JavaScript사용)</li>
                         <li>
                           - async/await 해외 api 활용하여 음식 영양소 및 이미지 화면 출력
                           <a href="https://www.edamam.com/" target="_blank" rel="noreferrer">
@@ -299,7 +294,7 @@ function PortFolio() {
                         window.open("https://github.com/kimminjung96/YORIJORI");
                       }}
                     >
-                      깃허브보기
+                      깃허브
                     </button>
                     <button
                       type="button"
@@ -308,7 +303,7 @@ function PortFolio() {
                         window.open("https://drive.google.com/file/d/1IRXlQxAo6fJxmf3fEp0DNBGyAKjgfFa6/view?usp=sharing");
                       }}
                     >
-                      기획서보기
+                      기획서
                     </button>
                     <button
                       type="button"
@@ -317,7 +312,7 @@ function PortFolio() {
                         window.open("https://kimminjung96.github.io/YORIJORI/");
                       }}
                     >
-                      사이트보기
+                      사이트
                     </button>
                   </div>
                 </div>
